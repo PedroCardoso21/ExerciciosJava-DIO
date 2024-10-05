@@ -2,31 +2,32 @@ package Exercicio3.dominio;
 
 import java.util.Scanner;
 
-public class Calculo {
-    private int A;
-    private int B;
+public class Calculo implements InterfaceCalculo {
+    private final int A;
+    private final int B;
     private int C;
 
-    Scanner entrada = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     public Calculo() {
         System.out.print("Digite o valor de A: ");
-        this.A = entrada.nextInt();
+        A = input.nextInt();
         System.out.print("Digite o valor de B: ");
-        this.B = entrada.nextInt();
+        B = input.nextInt();
     }
 
-    public boolean iguais() {
+    @Override
+    public boolean valoresIguais() {
         return A == B;
     }
 
-    public void testeCalculo() {
-        if (iguais()) {
-            C = this.A + this.B;
-            System.out.println("Valores somados: " + C);
+    public void imprime() {
+        if (valoresIguais()) {
+            C = A + B;
+            System.out.println("Os valores são iguais, então o valor de C é " + C);
         } else {
-            C = this.A * this.B;
-            System.out.println("Valores multiplicados: " + C);
+            C = A * B;
+            System.out.println("Os valores são diferentes, então o valor de C é " + C);
         }
     }
 }

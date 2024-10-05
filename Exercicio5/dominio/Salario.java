@@ -1,20 +1,29 @@
 package Exercicio5.dominio;
+
 import java.util.Scanner;
 
-public class Salario {
-    private static final double SALARIO_MINIMO = 1293.20;
-    private double salario;
+public class Salario implements InterfaceSalario {
+    private final double salario;
+    private final double salarioMinimo;
 
-    Scanner entrada = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     public Salario() {
         System.out.print("Digite o seu salário: ");
-        salario = entrada.nextFloat();
+        salario = input.nextDouble();
+        System.out.print("Digite o salário mínimo: ");
+        salarioMinimo = input.nextDouble();
     }
 
-    public void calculoSalario() {
-        double salariosMinimos = salario / SALARIO_MINIMO;
-        System.out.println("Você ganha " + salariosMinimos + " salários mínimos");
+    @Override
+    public double quantidadeSalariosMinimos() {
+        return salario / salarioMinimo;
     }
 
+    @Override
+    public String toString() {
+        return "Seu salário é: " + salario +
+                "\nO salário mínimo é: " + salarioMinimo +
+                "\nVocê ganha " + quantidadeSalariosMinimos() + " salários mínimos";
+    }
 }

@@ -1,17 +1,24 @@
 package Exercicio6.dominio;
+
 import java.util.Scanner;
 
 public class Reajuste {
     private double valor;
-    Scanner entrada = new Scanner(System.in);
+    private double reajuste;
+
+    Scanner input = new Scanner(System.in);
 
     public Reajuste() {
         System.out.print("Digite um valor: ");
-        valor = entrada.nextDouble();
+        valor = input.nextDouble();
+        reajuste = valor * 1.05;
     }
 
-    public void calculoReajuste() {
-        valor *= 1.05;
-        System.out.println("Valor reajustado com 5%: " + valor);
+    @Override
+    public String toString() {
+        return "Reajuste{" +
+                "valor=" + valor +
+                ", valor com reajuste=" + reajuste +
+                '}';
     }
 }

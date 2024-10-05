@@ -2,32 +2,37 @@ package Exercicio1.dominio;
 
 import java.util.Scanner;
 
-public class SomaValores {
+public class SomaValores implements InterfaceSomaValores{
     private final double A;
     private final double B;
     private final double C;
-    private double soma;
+
+    Scanner input =  new Scanner(System.in);
 
     public SomaValores() {
-        Scanner scan = new Scanner(System.in);
         System.out.print("Digite o valor de A: ");
-        A = scan.nextDouble();
+        A = input.nextDouble();
         System.out.print("Digite o valor de B: ");
-        B = scan.nextDouble();
+        B = input.nextDouble();
         System.out.print("Digite o valor de C: ");
-        C = scan.nextDouble();
-        scan.close();
+        C = input.nextDouble();
     }
 
-    public void testaValores() {
-        soma = A + B;
-        System.out.println("A soma de " + A + " + " + B + " = " + soma);
-        if (soma > C) {
-            System.out.println("Maior que C");
-        } else if (soma == C) {
-            System.out.println("Igual a C");
+    @Override
+    public double soma() {
+        return A + B;
+    }
+
+    @Override
+    public boolean verificaMenorQueC() {
+        return soma() < C;
+    }
+
+    public void imprime() {
+        if(verificaMenorQueC()) {
+            System.out.println("A soma de A e B é menor que C");
         } else {
-            System.out.println("Menor que C");
+            System.out.println("A soma de A e B não é menor que C");
         }
     }
 }

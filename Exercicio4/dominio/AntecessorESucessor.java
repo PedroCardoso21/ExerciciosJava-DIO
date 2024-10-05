@@ -1,18 +1,30 @@
 package Exercicio4.dominio;
 import java.util.Scanner;
 
-public class AntecessorESucessor {
-    private int numero;
+public class AntecessorESucessor implements InterfaceAntecessorESucessor {
+    private final int numero;
 
-    Scanner entrada = new Scanner(System.in);
+    Scanner input =  new Scanner(System.in);
 
-    public AntecessorESucessor () {
-        System.out.print("Digite um número: ");
-        this.numero = entrada.nextInt();
+    public AntecessorESucessor() {
+        System.out.print("Digite um número inteiro: ");
+        numero = input.nextInt();
     }
 
-    public void resolucao() {
-        System.out.println("Antecessor: " + (this.numero - 1));
-        System.out.println("Sucessor: " + (this.numero + 1));
+    @Override
+    public int antecessor(){
+        return numero - 1;
+    }
+
+    @Override
+    public int sucessor(){
+       return numero + 1;
+    }
+
+    @Override
+    public String toString() {
+        return "Numero: " + numero +
+                "\nSucessor: " + sucessor() +
+                "\nAntecessor: " + antecessor();
     }
 }

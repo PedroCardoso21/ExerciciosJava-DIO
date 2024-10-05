@@ -8,6 +8,6 @@ public class ReajusteTest {
     public static void main(String[] args) {
         Reajuste reajuste =  new Reajuste();
 
-        reajuste.calculoReajuste();
+        System.out.println(reajuste);
     }
 }
