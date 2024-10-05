@@ -6,6 +6,6 @@ public class ProdutoTest {
     public static void main(String[] args) {
         Produto produto = new Produto();
 
-        produto.imprime();
+        System.out.println(produto);
     }
 }
