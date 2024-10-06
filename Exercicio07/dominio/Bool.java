@@ -12,6 +12,7 @@ public class Bool {
         valor1 = input.nextBoolean();
         System.out.print("Digite o segundo valor booleano (True/False): ");
         valor2 = input.nextBoolean();
+        input.close();
     }
 
     @Override

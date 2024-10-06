@@ -16,6 +16,7 @@ public class SomaValores implements InterfaceSomaValores{
         B = input.nextDouble();
         System.out.print("Digite o valor de C: ");
         C = input.nextDouble();
+        input.close();
     }
 
     @Override

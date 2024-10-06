@@ -18,6 +18,7 @@ public class Produto implements InterfaceProduto {
         System.out.println("4 - CREDITO_PARCELADO_TRES_VEZES_MAIS, preço normal do produto mais juros de 10%");
         System.out.print("Digite a forma de pagamento: ");
         formaPagamento = FormaPagamento.valueOf(input.next());
+        input.close();
     }
 
     @Override

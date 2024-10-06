@@ -13,6 +13,7 @@ public class Salario implements InterfaceSalario {
         salario = input.nextDouble();
         System.out.print("Digite o salário mínimo: ");
         salarioMinimo = input.nextDouble();
+        input.close();
     }
 
     @Override

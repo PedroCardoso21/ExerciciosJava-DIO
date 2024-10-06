@@ -12,6 +12,7 @@ public class Reajuste {
         System.out.print("Digite um valor: ");
         valor = input.nextDouble();
         reajuste = valor * 1.05;
+        input.close();
     }
 
     @Override

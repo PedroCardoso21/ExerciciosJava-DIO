@@ -13,6 +13,7 @@ public class Pessoa implements InterfacePessoa {
         nome = input.next();
         System.out.print("Digite sua idade: ");
         idade = input.nextInt();
+        input.close();
     }
 
     @Override

@@ -9,6 +9,7 @@ public class AntecessorESucessor implements InterfaceAntecessorESucessor {
     public AntecessorESucessor() {
         System.out.print("Digite um número inteiro: ");
         numero = input.nextInt();
+        input.close();
     }
 
     @Override

@@ -22,6 +22,7 @@ public class Notas implements InterfaceNotas {
         nota3 = input.nextDouble();
         System.out.print("Digite a quarta nota: ");
         nota4 = input.nextDouble();
+        input.close();
     }
 
     @Override

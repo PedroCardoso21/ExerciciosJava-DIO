@@ -10,6 +10,7 @@ public class VerificarNumero implements InterfaceVerificarNumero{
     public VerificarNumero() {
         System.out.print("Digite um número inteiro: ");
         valor = input.nextInt();
+        input.close();
     }
 
     @Override

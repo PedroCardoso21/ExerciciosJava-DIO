@@ -14,6 +14,7 @@ public class Calculo implements InterfaceCalculo {
         A = input.nextInt();
         System.out.print("Digite o valor de B: ");
         B = input.nextInt();
+        input.close();
     }
 
     @Override

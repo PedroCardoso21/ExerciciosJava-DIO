@@ -16,6 +16,7 @@ public class TresValores implements InterfaceTresValores{
         B = input.nextInt();
         System.out.print("Digite o valor de C: ");
         C = input.nextInt();
+        input.close();
     }
 
     @Override
